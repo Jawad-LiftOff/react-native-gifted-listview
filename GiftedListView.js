@@ -317,13 +317,14 @@ var GiftedListView = React.createClass({
   },
   
   _renderPaginationView() {
-    if ((this.state.paginationStatus === 'fetching' && this.props.pagination === true) || (this.state.paginationStatus === 'firstLoad' && this.props.firstLoader === true)) {
-      return this.props.paginationFetchigView();
-    } else if (this.state.paginationStatus === 'waiting' && this.props.pagination === true && (this.props.withSections === true || this._getRows().length > 0)) {
-      return this.props.paginationWaitingView(this._onPaginate);
-    } else if (this.state.paginationStatus === 'allLoaded' && this.props.pagination === true) {
-      return this.props.paginationAllLoadedView();
-    } else if (this._getRows().length === 0) {
+    // if ((this.state.paginationStatus === 'fetching' && this.props.pagination === true) || (this.state.paginationStatus === 'firstLoad' && this.props.firstLoader === true)) {
+    //   return this.props.paginationFetchigView();
+    // } else if (this.state.paginationStatus === 'waiting' && this.props.pagination === true && (this.props.withSections === true || this._getRows().length > 0)) {
+    //   return this.props.paginationWaitingView(this._onPaginate);
+    // } else if (this.state.paginationStatus === 'allLoaded' && this.props.pagination === true) {
+    //   return this.props.paginationAllLoadedView();
+    // } else 
+    if (this._getRows().length === 0) {
       return this.props.emptyView(this._onRefresh);
     } else {
       return null;
@@ -352,11 +353,11 @@ var GiftedListView = React.createClass({
         ref="listview"
         dataSource={this.state.dataSource}
         renderRow={this.props.rowView}
-        //renderSectionHeader={this.props.sectionHeaderView}
+        renderSectionHeader={this.props.sectionHeaderView}
 
 
         renderHeader={this.props.refreshable === true ? this._renderRefreshView : null}
-        //renderFooter={this._renderPaginationView}
+        renderFooter={this._renderPaginationView}
         
         onScroll={this.props.refreshable === true ? this._onScroll : null}
         onResponderRelease={this.props.refreshable === true ? this._onResponderRelease : null}
