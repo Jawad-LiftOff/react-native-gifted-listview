@@ -34,11 +34,11 @@ var GiftedListView = React.createClass({
     var customStyles = {
       separator: {
         height: 1,
-        backgroundColor: '#CCC'
+        backgroundColor: 'transparent'
       },
       refreshableView: {
         height: 50,
-        backgroundColor: '#DDD',
+        backgroundColor: 'transparent',
         justifyContent: 'center',
         alignItems: 'center',
       },
@@ -49,7 +49,7 @@ var GiftedListView = React.createClass({
         height: 44,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#FFF',
+        backgroundColor: 'transparent',
       },
       defaultView: {
         justifyContent: 'center',
