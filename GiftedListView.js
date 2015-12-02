@@ -352,11 +352,11 @@ var GiftedListView = React.createClass({
         ref="listview"
         dataSource={this.state.dataSource}
         renderRow={this.props.rowView}
-        renderSectionHeader={this.props.sectionHeaderView}
+        //renderSectionHeader={this.props.sectionHeaderView}
 
 
         renderHeader={this.props.refreshable === true ? this._renderRefreshView : null}
-        renderFooter={this._renderPaginationView}
+        //renderFooter={this._renderPaginationView}
         
         onScroll={this.props.refreshable === true ? this._onScroll : null}
         onResponderRelease={this.props.refreshable === true ? this._onResponderRelease : null}
@@ -369,6 +369,7 @@ var GiftedListView = React.createClass({
         automaticallyAdjustContentInsets={false}
         scrollEnabled={true}
         canCancelContentTouches={true}
+        style={{backgroundColor: 'transparent'}}
         
         {...this.props}
       />

@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FaridSafi/react-native-gifted-listview.git"
+    "url": "git+https://github.com/Jawad-LiftOff/react-native-gifted-listview.git"
   },
   "keywords": [
     "pull-to-refresh",
